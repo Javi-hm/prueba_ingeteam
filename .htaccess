@@ -1,0 +1,18 @@
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+#Para quitar los / sobrantes
+RewriteRule ^(.*)/$ /$1 [L,R]
+
+#La Home de la web
+RewriteRule ^$ /ingeteam/front/html/index.html
+RewriteRule ^perfil$ /ingeteam/front/html/profile.html
+
+#Error 404
+ErrorDocument 404 /ingeteam/front/html/404error.html
