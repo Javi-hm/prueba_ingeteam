@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ingeteam</title>
+
+
+        <!--Importamos CSS-->
+        <link rel="stylesheet" href="/ingeteam/front/css/global.css">
+        <link rel="stylesheet" href="/ingeteam/front/css/index.css">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="/ingeteam/front/css/font-awesome/css/all.css">
+
+    </head>
+    <body>
+        <script src="/ingeteam/front/js/jquery/jquery-3.5.0.js"></script>
+        <script src="/ingeteam/front/js/utils.js"></script>
+
+        <div class="container">
+
+            <div class="form-login">
+                <img src="/ingeteam/front/img/ingeteam-logo.png" alt="Logo Ingeteam">
+                <form id="form-login" autocomplete="off">
+                    <div class="form-field">
+                        <label for="email">E-mail</label>
+                        <input id="login-email" type="email" name="email" placeholder="Escribe tu email" maxlength="256">
+                    </div>
+                    <p class="field-error" id="error-login-email">&nbsp;</p>
+                    <div class="form-field">
+                        <label for="password">Contraseña</label>
+                        <input id="login-password" type="password" name="password" placeholder="Escribe tu contraseña" maxlength="128">
+                    </div>
+                    <p class="field-error">&nbsp;</p>
+                </form>
+                <div class="form-field submit">
+                    <p id="submit-login">Iniciar sesión</p>
+                </div>
+                <p class="text-sign-up"><span>¿No tienes cuenta? Registrate.<span></p>
+                <p class="login-error"><i class="fas fa-exclamation-triangle"></i> E-mail o contraseña incorrectos.</p>  
+            </div>
+
+            <div class="form-sign-up">
+                <img src="/ingeteam/front/img/ingeteam-logo.png" alt="Logo Ingeteam">
+                <form id="form-sign-up" autocomplete="off">
+                    <div class="form-left">
+                        <div class="form-field">
+                            <label for="username">Usuario</label>
+                            <input id="sign-up-username" type="text" name="username" placeholder="Escribe tu nombre de usuario" maxlength="32" autocomplete="off">
+                        </div>
+                        <p class="field-error" id="error-sign-up-username">&nbsp;</p>
+                        <div class="form-field">
+                            <label for="email">E-mail</label>
+                            <input id="sign-up-email" type="email" name="email" placeholder="Escribe tu email" maxlength="256" autocomplete="off">
+                        </div>
+                        <p class="field-error" id="error-sign-up-email">&nbsp;</p>
+                        <div class="form-field">
+                            <label for="description">Descripción</label>
+                            <textarea id="sign-up-description" name="description" placeholder="Escribe una descripción sobre tí..." spellcheck="false"></textarea>
+                        </div>
+                        <p class="field-error" id="error-sign-up-description">&nbsp;</p>
+                    </div>
+                    <div class="form-right">
+                        <div class="form-field">
+                            <label for="address">Dirección</label>
+                            <input id="sign-up-address" type="text" name="address" placeholder="Escribe tu dirección" maxlength="256" autocomplete="off">
+                        </div>
+                        <p class="field-error" id="error-sign-up-address">&nbsp;</p>
+                        <div class="form-field">
+                            <label for="cp">Código postal</label>
+                            <input id="sign-up-cp" type="text" name="cp" placeholder="Escribe tu código postal" maxlength="5" autocomplete="off">
+                        </div>
+                        <p class="field-error" id="error-sign-up-cp">&nbsp;</p>
+                        <div class="form-field">
+                            <label for="password">Contraseña</label>
+                            <input id="sign-up-password" type="password" name="password" placeholder="Escribe tu contraseña" maxlength="128">
+                        </div>
+                        <p class="field-error" id="error-sign-up-password">&nbsp;</p>
+                        <div class="form-field">
+                            <label for="rpassword">Repetir contraseña</label>
+                            <input id="sign-up-password-repeat" type="password" name="rpassword" placeholder="Escribe tu contraseña" maxlength="128">
+                        </div>
+                        <p class="field-error">&nbsp;</p>
+                    </div>
+                </form>
+                <div class="form-field submit">
+                    <p id="submit-sign-up">Crear cuenta</p>
+                </div>
+                <p class="text-login"><span>¿Tienes cuenta? Inicia sesión.<span></p>
+            </div>
+            
+        </div>
+
+        <script src="/ingeteam/front/js/global.js"></script>
+        <script src="/ingeteam/front/js/index.js"></script>
+
+    </body>
+</html>

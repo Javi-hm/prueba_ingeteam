@@ -1,0 +1,120 @@
+:root {
+    --red-ingeteam: #B6142C;
+    --background: #F1F1F1;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    background-color: var(--background);
+}
+
+.horizontal-navbar{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-bottom: 8px solid var(--red-ingeteam);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 15;
+}
+
+.horizontal-navbar img{
+    margin-left: 20px;
+    width: 180px;
+}
+
+.horizontal-navbar p{
+    font-size: 20px;
+    color: var(--red-ingeteam);
+    margin: 0 20px 0 0;
+    width: 100%;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.horizontal-navbar p span:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+.end-horizontal-navbar{
+    height: 88px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-navbar{
+    z-index: 15;
+    background-color: white;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: -700px;
+    transition: all 1s;
+    box-shadow: -10px 0px 6px -10px black;
+}
+
+.show-vertical-navbar{
+    right: 0px;
+    transition: all .5s;
+}
+
+.vertical-navbar p{
+    width: calc(100% - 32px);
+    padding: 16px;
+    margin: 0;
+}
+
+.vertical-navbar p:hover{
+    background-color: var(--background); 
+    cursor: pointer;   
+}
+
+.vertical-navbar-title{
+    font-weight: bold;
+}
+
+.vertical-navbar-title:hover{
+    background-color: white !important; 
+    cursor: auto !important;
+}
+
+.vertical-navbar a{
+    text-decoration: none;
+    color: black;
+}
+
+hr{
+    margin: 0;
+}
+
+#close-vertical-navbar{
+    color: var(--red-ingeteam);
+    display: block;
+    float: right;
+}
+
+#close-vertical-navbar:hover{
+    cursor: pointer;
+}
+
+
+@media (max-width:600px){
+    .horizontal-navbar img{
+        margin-left: 10px;
+        width: 120px;
+    }
+    .horizontal-navbar p{
+        font-size: 16px;
+        margin: 0 10px 0 0;
+    }
+    .vertical-navbar{
+        width: 90%;
+    }
+}

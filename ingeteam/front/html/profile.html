@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeteam</title>
+
+    <!--Importamos CSS-->
+    <link rel="stylesheet" href="/ingeteam/front/css/global.css">
+    <link rel="stylesheet" href="/ingeteam/front/css/navbar.css">
+    <link rel="stylesheet" href="/ingeteam/front/css/profile.css">
+        
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/ingeteam/front/css/font-awesome/css/all.css">
+
+</head>
+<body>
+    <script src="/ingeteam/front/js/jquery/jquery-3.5.0.js"></script>
+    <script src="/ingeteam/front/js/utils.js"></script>
+
+    <header>
+        <!--    Creamos la barra de navegacion de forma dinámica con JQuery 
+                (La barra de navegacion es una parte comun en toda la web
+                 por lo que si queremos importarla en cualquier parte de 
+                 la web solo tenemos que crear la etiqueta header y añadir 
+                 el script navbar.js y la hoja de estilos navbar.css.
+                 Además, si necesitamos modificarla en un futuro, solo es 
+                 necesario módificar el script navbar.js) 
+        -->
+    </header>
+    <script src="/ingeteam/front/js/navbar.js"></script>
+
+    
+    <div class="container">
+        <div class="notification">
+            <p></p>
+        </div>
+        <div class="user-data">
+            <h1>Mis datos &nbsp;&nbsp;<span id="edit-password"><i class="fas fa-edit"></i></span></h1>
+            <form id="form-user-data" autocomplete="off">
+                <div class="info-container">
+                    <div class="user-data-label-value disabled" id="container-email">
+                        <p class="user-data-label">E-mail</p>
+                        <input class="user-data-value" id="user-data-email" type="email" disabled>
+                    </div>
+                    <div class="user-data-label-value" id="container-username">
+                        <p class="user-data-label">Usuario</p>
+                        <input class="user-data-value" id="user-data-username" type="text" name="username" maxlength="128">
+                    </div>
+                    <div class="user-data-label-value" id="container-address">
+                        <p class="user-data-label">Dirección</p>
+                        <input class="user-data-value" id="user-data-address" type="text" name="address" maxlength="256">
+                    </div>
+                    <div class="user-data-label-value" id="container-cp">
+                        <p class="user-data-label">C. Postal</p>
+                        <input class="user-data-value" id="user-data-cp" type="text" name="cp" maxlength="5">
+                    </div>
+                    <div class="user-data-label-value" id="container-description">
+                        <p class="user-data-label">Descripción</p>
+                        <textarea class="user-data-value" id="user-data-description" type="text" name="description" spellcheck="false"></textarea>
+                    </div>
+                </div>
+                <div id="submit-form-user-data">
+                    <p>Guardar cambios</p>
+                </div>
+            </form>
+        </div>
+        <div class="overlay-password">
+            <div class="form-password">
+                <p class="form-title">Cambiar contraseña <span id="close-form-password"><i class="fas fa-times"></i></span></p>
+                <form id="form-change-password" autocomplete="off">
+                    <div class="form-field">
+                        <label for="oldpassword">Antigua contraseña</label>
+                        <input id="old-password" type="password" name="oldpassword" placeholder="Escribe tu antigua contraseña" maxlength="128">
+                    </div>
+                    <p class="field-error" id="error-old-password">&nbsp;</p>
+                    <div class="form-field">
+                        <label for="newpassword">Nueva contraseña</label>
+                        <input id="new-password" type="password" name="newpassword" placeholder="Escribe tu nueva contraseña" maxlength="128">
+                    </div>
+                    <p class="field-error" id="error-new-password">&nbsp;</p>
+                    <div class="form-field">
+                        <label for="newrpassword">Repetir nueva contraseña</label>
+                        <input id="new-password-repeat" type="password" name="newrpassword" placeholder="Escribe tu nueva contraseña" maxlength="128">
+                    </div>
+                    <p class="field-error">&nbsp;</p>
+                </form>
+                <div class="form-field submit">
+                    <p id="submit-change-password">Cambiar contraseña</p>
+                </div>
+            </div>
+        </div>
+        <div class="task-data">
+            <h1>Mis tareas &nbsp;&nbsp;<span id="add-task"><i class="fas fa-plus-circle"></i></span></h1>
+            <div class="info-container" id="user-tasks">
+                
+            </div>
+        </div>
+        <div class="overlay-task">
+            <div class="form-task">
+                <p class="form-title">Añadir tarea <span id="close-form-task"><i class="fas fa-times"></i></span></p>
+                <form id="form-add-task">
+                    <div class="form-field">
+                        <label for="name">Nombre la de tarea</label>
+                        <input id="task-name" type="text" name="name" placeholder="Escribe el nombre de la tarea" maxlength="128">
+                    </div>
+                    <p class="field-error" id="error-task-name">&nbsp;</p>
+                    <div class="form-field">
+                        <label for="description">Descripción</label>
+                        <textarea id="task-description" name="description" placeholder="Escribe una descripción de la tarea..."></textarea>
+                    </div>
+                    <p class="field-error" id="error-task-description">&nbsp;</p>
+                </form>
+                <div class="form-field submit">
+                    <p id="submit-add-task">Añadir tarea</p>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-edit-task">
+            <div class="form-edit-task">
+                <p class="form-title">Editar tarea <span id="close-form-edit-task"><i class="fas fa-times"></i></span></p>
+                <form id="form-edit-task">
+                    <div class="form-field">
+                        <label for="name">Nombre la de tarea</label>
+                        <input id="edit-task-name" type="text" name="name" maxlength="128">
+                    </div>
+                    <p class="field-error" id="error-edit-task-name">&nbsp;</p>
+                    <div class="form-field">
+                        <label for="state">Estado</label>
+                        <select id="edit-task-state" name="state">
+                            <option value="waiting">En espera</option>
+                            <option value="in_process">En proceso</option>
+                            <option value="finished">Finalizada</option>
+                        </select>
+                    </div>
+                    <p class="field-error">&nbsp;</p>
+                    <div class="form-field">
+                        <label for="description">Descripción</label>
+                        <textarea id="edit-task-description" name="description"></textarea>
+                    </div>
+                    <p class="field-error" id="error-edit-task-description">&nbsp;</p>
+                </form>
+                <div class="form-field submit">
+                    <p id="submit-edit-task">Editar tarea</p>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-delete">
+            <div class="confirm-delete">
+                <p>¿Desea borrar la tarea?</p>
+                <p id="confirm-delete-ok">Aceptar</p>
+                <p id="confirm-delete-cancel">Cancelar</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/ingeteam/front/js/global.js"></script>
+    <script src="/ingeteam/front/js/profile.js"></script>
+</body>
+</html>

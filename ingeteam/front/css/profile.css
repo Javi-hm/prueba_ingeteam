@@ -1,0 +1,251 @@
+.container{
+    margin: 0 auto 88px auto;
+    width: 85%;
+}
+
+h1{
+    margin: 20px 20px 10px 10px;
+    font-size: 30px;
+}
+
+h1:after{
+    display: block;
+    content: "";
+    background: var(--red-ingeteam);
+    height: 4px;
+    width: 40px;
+}
+
+#edit-password{
+    opacity: .8;
+    color: #000F92;
+    font-size: 24px;
+}
+#add-task{
+    opacity: .8;
+    color: green;
+    font-size: 28px;
+}
+#edit-password:hover, #add-task:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay-password, .overlay-task, .overlay-delete, .overlay-edit-task{
+    z-index: 30;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-password, .form-task, .form-edit-task{
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+}
+
+.form-title{
+    margin: 0 0 20px 0;
+    font-size: 24px;
+}
+
+.form-title span{
+    color: var(--red-ingeteam);
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.user-data-label-value{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #919191;
+    margin: 10px 10px 0 10px;
+    cursor: default;
+}
+
+.user-data-label{
+    margin: 0 0 8px 0;
+}
+
+.user-data-value{
+    margin: 0;
+    color: #8F8F8F;
+    background-color: var(--background);
+}
+
+#container-email{
+    width: calc(30% - 42px);
+}
+#container-username{
+    width: calc(20% - 42px);
+}
+#container-address{
+    width: calc(35% - 42px);
+}
+#container-cp{
+    width: calc(15% - 42px);
+}
+#container-description{
+    width: calc(100% - 42px);
+}
+
+#submit-form-user-data{
+    border-radius: 5px;
+    background-color: var(--red-ingeteam);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 10px 10px 0 auto;
+    width: 200px;
+}
+#submit-form-user-data p{
+    width: 100%;
+    margin: 0;
+}
+#submit-form-user-data:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.task-column{
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.task-title{
+    margin-top: 0;
+}
+
+.task-title:after{
+    display: block;
+    content: "";
+    background: var(--red-ingeteam);
+    height: 2px;
+    width: 20px;
+    margin: 5px auto;
+}
+
+.task-waiting, .task-in-process, .task-finished{
+    width: calc(100% - 32px);
+    padding: 15px;
+    text-align: justify;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.task-waiting p, .task-in-process p, .task-finished p{
+    margin: 0;
+}
+
+.task-name{
+    margin-bottom: 10px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.task-waiting{
+    border-left: 5px solid #A89300;
+    background-color: #FCF4BA;
+    color: #A89300;
+}
+
+.task-in-process{
+    border-left: 5px solid #001785;
+    background-color: #CADFFF;
+    color: #001785;
+}
+
+.task-finished{
+    border-left: 5px solid black;
+    background-color: #C4C4C4;
+    color: black;
+}
+
+.task-operation{
+    display: block;
+    float: right;
+    cursor: pointer;
+    margin: 0 6px;
+}
+
+.no-tasks{
+    width: 100%;
+    text-align: center;
+}
+
+.confirm-delete{
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.confirm-delete p{
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+}
+
+#confirm-delete-ok, #confirm-delete-cancel{
+    width: calc(50% - 38px);
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    border: 1px solid black;
+    font-size: 16px;
+    margin: 20px 10px 0 10px;
+    cursor: pointer;
+}
+#confirm-delete-ok{
+    background-color: green;
+}
+#confirm-delete-cancel{
+    background-color: var(--red-ingeteam);
+}
+
+@media (max-width:908px){
+    .user-data-label-value{
+        width: calc(100% - 42px) !important;
+    }
+    .task-column{
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width:600px){
+    .container{
+        width: 90%;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .form-password, .form-task, .form-edit-task, .confirm-delete{
+        width: 300px;
+    }
+    #submit-form-user-data{
+        width: calc(100% - 20px);
+    }
+}
