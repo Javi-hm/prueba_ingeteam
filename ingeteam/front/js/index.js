@@ -101,6 +101,9 @@ function login(){
                 location.href="/perfil";
             }else{
                 $('.login-error').css('display', 'block');
+                setTimeout(function(){
+                    $('.login-error').css('display', 'none');
+                }, 3000);
             }
         },
         error: function(error){
@@ -247,7 +250,13 @@ function sign_up(){
         success: function(res){
             var json = JSON.parse(res);
             if(json.result){
+                $('.sign-up-error').css('display', 'none');
                 location.href="/perfil";
+            }else{
+                $('.sign-up-error').css('display', 'block');
+                setTimeout(function(){
+                    $('.sign-up-error').css('display', 'none');
+                }, 3000);
             }
         },
         error: function(error){
