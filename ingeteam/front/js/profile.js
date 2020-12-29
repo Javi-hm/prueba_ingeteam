@@ -45,7 +45,7 @@ $(document ).ready(function() {
         update_user();
     });
     $("#form-user-data").keypress(function(e) {
-        if(e.which == 13) {
+        if(e.which == 13 && !$('textarea').is(':focus')) {
             update_user();
         }
     });
@@ -85,7 +85,7 @@ $(document ).ready(function() {
     });
     $("#form-add-task").keypress(function(e) {
         if(e.which == 13) {
-            if(validate_form_add_task()){
+            if(validate_form_add_task() && !$('textarea').is(':focus')){
                 add_task();
             }
         }
@@ -118,7 +118,7 @@ $(document ).ready(function() {
     });
     $("#form-edit-task").keypress(function(e) {
         if(e.which == 13) {
-            if(validate_form_edit_task()){
+            if(validate_form_edit_task() && !$('textarea').is(':focus')){
                 edit_task();
             }
         }

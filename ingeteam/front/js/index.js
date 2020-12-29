@@ -60,7 +60,7 @@ $(document ).ready(function() {
     });
     $("#form-sign-up").keypress(function(e) {
         if(e.which == 13) {
-            if(validate_form_sign_up()){
+            if(validate_form_sign_up() && !$('textarea').is(':focus')){
                 sign_up();
             }
         }
