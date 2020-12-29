@@ -1,6 +1,11 @@
 # Prueba INGETEAM
 
+## Web 
+
+La web realizada para la prueba se encuentra en un hosting gratuito, por lo que para poder ver el resultado, lo único que será necesario es acceder a la siguiente URL https://javierherrerosmartinez.000webhostapp.com/  
+
 ## Pasos para despliegue de la web 🔧
+En caso de querer utilizar la web en un entorno local, los pasos a seguir serian los siguientes:  
 Paso 1:  
     -Instalar una distribución de Apache como por ejemplo [XAMPP](https://www.apachefriends.org/es/index.html)  
 Paso 2:  
