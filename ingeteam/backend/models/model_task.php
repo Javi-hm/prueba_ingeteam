@@ -44,7 +44,7 @@ class Task{
 
             if($task_name != '' && $task_description != ''){
                 $query = $this->db->prepare('INSERT INTO tasks (task_id, user_id, task_date, task_state, task_name, task_description) VALUES (?,?,?,?,?,?)');
-                $insert_ok = $query->execute(['null', $user_id, date('Y-m-d H:i:s'), 'waiting', $task_name, $task_description]);
+                $insert_ok = $query->execute([null, $user_id, date('Y-m-d H:i:s'), 'waiting', $task_name, $task_description]);
                 if($insert_ok){
                     $result['result'] = $insert_ok;
                     $result['info'] = "Tarea añadida correctamente.";

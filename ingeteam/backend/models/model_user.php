@@ -102,7 +102,7 @@ class User{
 
                     //Ejecutamos el insert
                     $query = $this->db->prepare('INSERT INTO users (user_id, username, email, description, address, cp, password) VALUES (?,?,?,?,?,?,?)');
-                    $insert_ok = $query->execute(['null', $username, $email, $description, $address, $cp, $password_hashed]);
+                    $insert_ok = $query->execute([null, $username, $email, $description, $address, $cp, $password_hashed]);
                     if($insert_ok){
                         $query = $this->db->prepare("SELECT user_id FROM users WHERE email = '".$email."' LIMIT 1");
                         $query->execute();
